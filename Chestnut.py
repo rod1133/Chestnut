@@ -1,21 +1,39 @@
+# code to insert text into a list
+
+'''
+
+f = open("test2.txt", "r")
+myList = []
+for line in f:
+    myList.append(line)
+print(myList)
+'''
+
+# when using main, it s a good idea to set up main anuway
+# Input of the name and location of the *.txt file
+#  [0, 1,   2,  3,     4,  5, 6, 7,   8,     9, 10,   11,     12]
 ValidInput=False
 while ValidInput==False:
     try:
-        filename = input(" Please enter the path and name of the *.txt file: ")
+        filename = input(" Welcome to the Chestnut, Please enter the path and name of the *.txt file: ")
+        #f = open(filename, "r")
+        #print(f.readline())
+        #print(f.read())
+
         f = open(filename, "r")
-        print(f.read(1))
-        print(f.read())
+        myList = []
+        for line in f:
+            myList.append(line)
+        print(myList)
+        print(len(myList))
+        print (myList[0].split())
         f.close()
 
     except FileExistsError:
         print("Sorry File Does Not Exist")
     except PermissionError:
-        print(" Sorry You do Not have Permisison to Access the File")
+        print(" Sorry You do Not have Permisison to Access this File")
+        print(" Please check with your system administrator")
+        ValidInput == True
     except FileNotFoundError:
-        print(" Sorry file does not exist")
-
-    #f = open("test.txt", "r")
-    #myList = []
-    #for line in f:
-        #myList.append(line)
-    #print(myList)
+        print(" The File was not found, please try again")
