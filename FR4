@@ -24,8 +24,16 @@ while ValidInput==False:
         myList = []
         for line in f:
             myList.append(line)
-        print(myList)
+        # words = report.split()
+        # print(words)
+        # validwords = 0
+        # testword = 0
+        # print(myList)
+        # for report[a} == '.' or report[a] == ',' or report[a] == '!' or report [a}
+        count = len(filename)
+        print(count)
         print(len(myList))
+        print (myList[0].split())
         f.close()
 
     except FileExistsError:
@@ -36,8 +44,3 @@ while ValidInput==False:
         ValidInput == True
     except FileNotFoundError:
         print(" The File was not found, please try again")
-
-
-
-
-
