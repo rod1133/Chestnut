@@ -1,0 +1,33 @@
+def menu():
+    print("\n1. Open New File ")
+    print("2. Review Results of Last File ")
+    print("3. Save Data")
+    print("4. Exit")
+    pick = int(input("Enter a Choice: "))
+    return pick
+
+def toCelsius(f):
+    return int ((f-32)/1.8)
+
+def toFahrenheit(c):
+    return int(c * 1.8 + 32)
+
+def main():
+    choice = menu ()
+    while choice != 4:
+        if choice == 1:
+            #Open New File Choice
+            c = eval(input("Please enter Celsius Degree in "))
+            print (str(c) + "C= "+ str(toFahrenheit(c))) +"F= "
+        elif choice == 2:
+            #Review Results of last file
+            f = eval(input("Please enter Fahrenheit Degree in "))
+            print (str(f) + "F= " + str(toCelsius(f)) + "C")
+        elif choice == 3:
+            #Save Data
+            
+            print(str )
+        else:
+            print ("Invaild Entry")
+
+        choice = menu ()
